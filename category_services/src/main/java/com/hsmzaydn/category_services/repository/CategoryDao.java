@@ -39,11 +39,11 @@ public class CategoryDao {
         this.categoryTitle = categoryTitle;
     }
 
-    public List<CommandBean> getCommandList() {
+    public List<CommandBean> getCommands() {
         return commands;
     }
 
-    public void setCommandList(List<CommandBean> commandList) {
-        this.commands = commandList;
+    public void setCommands(List<CommandBean> commands) {
+        this.commands = commands;
     }
 }

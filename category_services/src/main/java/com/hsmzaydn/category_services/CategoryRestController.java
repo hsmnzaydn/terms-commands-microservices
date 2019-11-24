@@ -7,6 +7,7 @@ import com.hsmzaydn.category_services.services.CategoryServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @RestController
@@ -19,6 +20,11 @@ public class CategoryRestController {
     @PostMapping
     public CategoryDao addCategory(@RequestBody CategoryBean categoryBean) throws ExecutionException, InterruptedException {
         return categoryServices.createCategory(categoryBean);
+    }
+
+    @GetMapping
+    public List<CategoryDao> getCategories(){
+        return categoryServices.getCategories();
     }
 
 
