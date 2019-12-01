@@ -14,6 +14,8 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class CommandServicesImpl implements CommandServices {
@@ -48,6 +50,11 @@ public class CommandServicesImpl implements CommandServices {
         createCommandEvent.setCategoryId(commandDao.getCategoryId());
         kafkaTemplate.send("createCommand", createCommandEvent);
         return commandDao;
+    }
+
+    @Override
+    public List<CommandDao> getCommandsOfCategory(int categoryId) {
+        return commandRepository.findByCategoryId(categoryId);
     }
 
    /* @KafkaListener(topics = "test", groupId = "term")

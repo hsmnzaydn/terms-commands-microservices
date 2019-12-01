@@ -18,14 +18,16 @@ zuul:
   routes:
     category-service:
       serviceId: category-service
-      path: /api/categories
+      path: /api/categories/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
+
     command-service:
       serviceId: command-service
-      path: /api/commands
+      path: /api/commands/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
+
     auth-service:
       path: /auth/**
       service-id : AUTH-SERVICE

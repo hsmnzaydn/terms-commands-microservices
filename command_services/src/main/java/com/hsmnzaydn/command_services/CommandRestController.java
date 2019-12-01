@@ -7,11 +7,12 @@ import com.hsmnzaydn.command_services.services.CommandServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping("/api/commands")
-public class CategoryRestController {
+@RequestMapping("/auth/api/commands")
+public class CommandRestController {
 
     @Autowired
     CommandServices commandServices;
@@ -19,6 +20,11 @@ public class CategoryRestController {
     @PostMapping
     public CommandDao addCategory(@RequestBody CommandBean commandBean) throws ExecutionException, InterruptedException {
         return commandServices.createCommand(commandBean);
+    }
+
+    @GetMapping("/category/{categoryId}")
+    public List<CommandDao> getCommandsOfCategory(@PathVariable int categoryId){
+        return commandServices.getCommandsOfCategory(categoryId);
     }
 
 

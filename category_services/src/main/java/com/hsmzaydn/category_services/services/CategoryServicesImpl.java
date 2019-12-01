@@ -7,15 +7,12 @@ import com.hsmzaydn.category_services.models.CommandBean;
 import com.hsmzaydn.category_services.repository.CategoryDao;
 import com.hsmzaydn.category_services.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
-import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 @Service
 @RequiredArgsConstructor
@@ -23,21 +20,10 @@ public class CategoryServicesImpl implements CategoryServices {
 
 
     private final CategoryRepository categoryRepository;
-
-    private final CommandGateway commandGateway;
-    private final QueryGateway queryGateway;
-
     private final KafkaTemplate<String, String> kafkaTemplate;
 
 
-    @Autowired
-    public CategoryServicesImpl(CommandGateway commandGateway, QueryGateway queryGateway, CategoryRepository categoryRepository,
-                                KafkaTemplate<String, String> kafkaTemplate) {
-        this.commandGateway = commandGateway;
-        this.queryGateway = queryGateway;
-        this.categoryRepository = categoryRepository;
-        this.kafkaTemplate = kafkaTemplate;
-    }
+
 
     @Override
     public CategoryDao createCategory(CategoryBean categoryBean) {
@@ -63,7 +49,7 @@ public class CategoryServicesImpl implements CategoryServices {
     }
 
     @Override
-    public CategoryDao getCategory(int categoryId) throws ExecutionException, InterruptedException {
+    public CategoryDao getCategory(int categoryId)  {
 
         return categoryRepository.findById(categoryId).get();
     }

@@ -1,7 +1,6 @@
 package com.hsmzaydn.category_services.configuration;
 
 import org.apache.kafka.common.serialization.StringDeserializer;
-import com.hsmnzaydn.core_api.events.CreateCategoryEvent;
 import com.hsmnzaydn.core_api.events.CreateCommandEvent;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.springframework.beans.factory.annotation.Value;
