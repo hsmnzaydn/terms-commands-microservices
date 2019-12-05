@@ -1,7 +1,6 @@
 package com.hsmnzaydn.command_services.configuration;
 
 import org.springframework.kafka.support.serializer.JsonSerializer;
-import com.hsmnzaydn.core_api.commands.CommandCreatedCommand;
 import com.hsmnzaydn.core_api.events.CreateCommandEvent;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

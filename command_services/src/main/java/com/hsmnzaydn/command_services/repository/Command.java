@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class CommandDao {
+public class Command {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

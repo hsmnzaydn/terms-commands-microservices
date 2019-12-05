@@ -1,6 +1,6 @@
 package com.hsmnzaydn.user_services;
 
-import com.hsmnzaydn.user_services.repository.UserDao;
+import com.hsmnzaydn.user_services.repository.User;
 import com.hsmnzaydn.user_services.service.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -20,9 +20,9 @@ public class UserRestAPI {
 
 
     @PostMapping("register")
-    public ResponseEntity<UserDao> createUser(@RequestBody UserDao userDao) {
+    public ResponseEntity<User> createUser(@RequestBody User user) {
 
-        return ResponseEntity.ok(userService.saveUser(userDao));
+        return ResponseEntity.ok(userService.saveUser(user));
 
     }
 

@@ -1,17 +1,17 @@
 package com.hsmzaydn.category_services.services;
 
 
-import com.hsmzaydn.category_services.models.CategoryBean;
-import com.hsmzaydn.category_services.repository.CategoryDao;
+import com.hsmzaydn.category_services.models.CategoryDTO;
+import com.hsmzaydn.category_services.repository.Category;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public interface CategoryServices {
 
-    CategoryDao createCategory(CategoryBean categoryBean);
+    Category createCategory(CategoryDTO categoryBean);
 
-    CategoryDao getCategory(int categoryId) throws ExecutionException, InterruptedException;
+    Category getCategory(int categoryId) throws ExecutionException, InterruptedException;
 
-    List<CategoryDao> getCategories();
+    List<Category> getCategories();
 }

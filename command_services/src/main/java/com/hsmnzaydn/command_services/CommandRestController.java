@@ -1,8 +1,8 @@
 package com.hsmnzaydn.command_services;
 
 
-import com.hsmnzaydn.command_services.model.CommandBean;
-import com.hsmnzaydn.command_services.repository.CommandDao;
+import com.hsmnzaydn.command_services.model.CommandDTO;
+import com.hsmnzaydn.command_services.repository.Command;
 import com.hsmnzaydn.command_services.services.CommandServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,12 +18,12 @@ public class CommandRestController {
     CommandServices commandServices;
 
     @PostMapping
-    public CommandDao addCategory(@RequestBody CommandBean commandBean) throws ExecutionException, InterruptedException {
-        return commandServices.createCommand(commandBean);
+    public Command addCategory(@RequestBody CommandDTO commandDTO) throws ExecutionException, InterruptedException {
+        return commandServices.createCommand(commandDTO);
     }
 
     @GetMapping("/category/{categoryId}")
-    public List<CommandDao> getCommandsOfCategory(@PathVariable int categoryId){
+    public List<Command> getCommandsOfCategory(@PathVariable int categoryId){
         return commandServices.getCommandsOfCategory(categoryId);
     }
 

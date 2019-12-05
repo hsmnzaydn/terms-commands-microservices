@@ -1,8 +1,8 @@
 package com.hsmzaydn.category_services;
 
 
-import com.hsmzaydn.category_services.models.CategoryBean;
-import com.hsmzaydn.category_services.repository.CategoryDao;
+import com.hsmzaydn.category_services.models.CategoryDTO;
+import com.hsmzaydn.category_services.repository.Category;
 import com.hsmzaydn.category_services.services.CategoryServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,18 +18,18 @@ public class CategoryRestController {
     CategoryServices categoryServices;
 
     @PostMapping
-    public CategoryDao addCategory(@RequestBody CategoryBean categoryBean) throws ExecutionException, InterruptedException {
+    public Category addCategory(@RequestBody CategoryDTO categoryBean) throws ExecutionException, InterruptedException {
         return categoryServices.createCategory(categoryBean);
     }
 
     @GetMapping
-    public List<CategoryDao> getCategories(){
+    public List<Category> getCategories(){
         return categoryServices.getCategories();
     }
 
 
     @GetMapping("/api/categories/{categoryId}")
-    public CategoryDao getCategory(@PathVariable("categoryId") int categoryId) throws ExecutionException, InterruptedException {
+    public Category getCategory(@PathVariable("categoryId") int categoryId) throws ExecutionException, InterruptedException {
         return categoryServices.getCategory(categoryId);
     }
 

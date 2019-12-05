@@ -1,14 +1,13 @@
 package com.hsmnzaydn.command_services.services;
 
 
-import com.hsmnzaydn.command_services.model.CommandBean;
-import com.hsmnzaydn.command_services.repository.CommandDao;
+import com.hsmnzaydn.command_services.model.CommandDTO;
+import com.hsmnzaydn.command_services.repository.Command;
 
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public interface CommandServices {
 
-    CommandDao createCommand(CommandBean commandBean);
-    List<CommandDao> getCommandsOfCategory(int categoryId);
+    CommandDTO createCommand(CommandDTO commandDTO);
+    List<CommandDTO> getCommandsOfCategory(int categoryId);
 }
