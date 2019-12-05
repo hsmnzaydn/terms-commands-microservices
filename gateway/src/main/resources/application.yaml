@@ -28,10 +28,10 @@ zuul:
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
 
-    auth-service:
-      path: /auth/**
-      service-id : AUTH-SERVICE
-      strip-prefix : false
+    user-service:
+      serviceId: user-service
+      path: /api/users/**
+      strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
   host:
     socket-timeout-millis: 30000

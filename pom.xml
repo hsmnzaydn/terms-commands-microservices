@@ -10,7 +10,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>discovery</module>
+        <module>user_services</module>
+        <module>disc</module>
         <module>category_services</module>
         <module>command_services</module>
         <module>core_api</module>

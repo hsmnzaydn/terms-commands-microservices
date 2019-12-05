@@ -60,6 +60,7 @@
             <scope>compile</scope>
         </dependency>
 
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

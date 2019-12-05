@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping("/auth/api/categories")
+@RequestMapping("/api/categories")
 public class CategoryRestController {
 
     @Autowired

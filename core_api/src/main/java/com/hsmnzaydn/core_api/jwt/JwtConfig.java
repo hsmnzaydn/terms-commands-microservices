@@ -3,38 +3,14 @@ package com.hsmnzaydn.core_api.jwt;
 import org.springframework.beans.factory.annotation.Value;
 
 public class JwtConfig {
-    @Value("${security.jwt.uri:/auth/**}")
-    private String Uri;
 
-    @Value("${security.jwt.header:Authorization}")
-    private String header;
+    public static final String SECRET = "term--commands";
+    public static final long EXPIRATION_TIME = 5 * 60 * 60; // 5 gün
+    public static final String TOKEN_PREFIX = "Bearer ";
+    public static final String HEADER_STRING = "Authorization";
+    public static final String SIGN_UP_URL = "/api/users/register";
 
-    @Value("${security.jwt.prefix:Bearer }")
-    private String prefix;
 
-    @Value("${security.jwt.expiration:#{24*60*60}}")
-    private int expiration;
 
-    @Value("${security.jwt.secret:JwtSecretKey}")
-    private String secret;
 
-    public String getUri() {
-        return Uri;
-    }
-
-    public String getHeader() {
-        return header;
-    }
-
-    public String getPrefix() {
-        return prefix;
-    }
-
-    public int getExpiration() {
-        return expiration;
-    }
-
-    public String getSecret() {
-        return secret;
-    }
 }
