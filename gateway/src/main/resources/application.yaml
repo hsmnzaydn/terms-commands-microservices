@@ -21,6 +21,8 @@ zuul:
       path: /api/categories/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
+      registerWithEureka: false
+      fetchRegistry: true
 
     command-service:
       serviceId: command-service
@@ -33,6 +35,9 @@ zuul:
       path: /api/users/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
+      registerWithEureka: false
+      fetchRegistry: true
+
   host:
     socket-timeout-millis: 30000
 
