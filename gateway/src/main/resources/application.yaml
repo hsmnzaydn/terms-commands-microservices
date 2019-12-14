@@ -22,7 +22,8 @@ zuul:
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
       registerWithEureka: false
-      fetchRegistry: true
+      client:
+        fetchRegistry: true
 
     command-service:
       serviceId: command-service

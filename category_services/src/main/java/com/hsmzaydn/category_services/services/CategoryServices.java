@@ -9,9 +9,9 @@ import java.util.concurrent.ExecutionException;
 
 public interface CategoryServices {
 
-    Category createCategory(CategoryDTO categoryBean);
+    CategoryDTO createCategory(CategoryDTO categoryBean);
 
-    Category getCategory(int categoryId) throws ExecutionException, InterruptedException;
+    CategoryDTO getCategory(int categoryId) throws ExecutionException, InterruptedException;
 
-    List<Category> getCategories();
+    List<CategoryDTO> getCategories();
 }

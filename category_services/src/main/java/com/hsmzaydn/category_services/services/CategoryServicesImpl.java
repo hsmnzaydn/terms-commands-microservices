@@ -13,6 +13,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,12 +27,18 @@ public class CategoryServicesImpl implements CategoryServices {
 
 
     @Override
-    public Category createCategory(CategoryDTO categoryBean) {
+    public CategoryDTO createCategory(CategoryDTO categoryBean) {
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Category category = new Category();
         category.setCategoryTitle(categoryBean.getCategoryTitle());
         //  commandGateway.send(new CategoryCreatedCommand(categoryBean.getCategoryId(), categoryBean.getCategoryTitle()));
         // kafkaTemplate.send("test","aaa");
-        return categoryRepository.save(category);
+        return new CategoryDTO(category.getId(),category.getCategoryTitle());
     }
 
     @KafkaListener(
@@ -48,13 +55,15 @@ public class CategoryServicesImpl implements CategoryServices {
     }
 
     @Override
-    public Category getCategory(int categoryId)  {
-
-        return categoryRepository.findById(categoryId).get();
+    public CategoryDTO getCategory(int categoryId)  {
+        Category category=categoryRepository.findById(categoryId).get();
+        return new CategoryDTO(category.getId(),category.getCategoryTitle());
     }
 
     @Override
-    public List<Category> getCategories() {
-        return categoryRepository.findAll();
+    public List<CategoryDTO> getCategories() {
+        return categoryRepository.findAll().stream()
+                .map(category -> new CategoryDTO(category.getId(),category.getCategoryTitle()))
+                .collect(Collectors.toList());
     }
 }
