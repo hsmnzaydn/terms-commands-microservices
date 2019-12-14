@@ -2,8 +2,9 @@ package com.hsmzaydn.category_services;
 
 
 import com.hsmnzaydn.core_api.CommonResponse;
+import com.hsmnzaydn.core_api.configuration.*;
+import com.hsmnzaydn.core_api.utility.Utility;
 import com.hsmzaydn.category_services.models.CategoryDTO;
-import com.hsmzaydn.category_services.repository.Category;
 import com.hsmzaydn.category_services.services.CategoryServices;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
@@ -22,34 +23,43 @@ public class CategoryRestController {
     CategoryServices categoryServices;
 
     @PostMapping
-    @HystrixCommand(fallbackMethod = "commonError", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")
+    @HystrixCommand(fallbackMethod = "addCategoryError", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = HystrixConfiguration.TIME_OUT)
     })
     public ResponseEntity<CommonResponse<CategoryDTO>> addCategory(@RequestBody CategoryDTO categoryDTO) throws ExecutionException, InterruptedException {
 
-        CommonResponse<CategoryDTO> categoryCommonResponse = new CommonResponse<>();
-        categoryCommonResponse.setData(categoryServices.createCategory(categoryDTO));
-        categoryCommonResponse.setCode(200);
-
-        return ResponseEntity.ok(categoryCommonResponse);
+        return ResponseEntity.ok(Utility.commonResponseFactory(categoryServices.createCategory(categoryDTO)));
     }
 
+    @HystrixCommand(fallbackMethod = "getCategoriesError", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = HystrixConfiguration.TIME_OUT)
+    })
     @GetMapping
-    public List<CategoryDTO> getCategories() {
-        return categoryServices.getCategories();
+    public ResponseEntity<CommonResponse<List<CategoryDTO>>> getCategories() {
+        return ResponseEntity.ok(Utility.commonResponseFactory(categoryServices.getCategories()));
     }
 
 
+    @HystrixCommand(fallbackMethod = "getCategoryError", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = HystrixConfiguration.TIME_OUT)
+    })
     @GetMapping("/api/categories/{categoryId}")
-    public CategoryDTO getCategory(@PathVariable("categoryId") int categoryId) throws ExecutionException, InterruptedException {
-        return categoryServices.getCategory(categoryId);
+    public ResponseEntity<CommonResponse<CategoryDTO>> getCategory(@PathVariable("categoryId") int categoryId) throws ExecutionException, InterruptedException {
+        return ResponseEntity.ok().body(Utility.commonResponseFactory(categoryServices.getCategory(categoryId)));
     }
 
 
-    private ResponseEntity<CommonResponse<CategoryDTO>> commonError(CategoryDTO categoryDTO) {
-        CommonResponse<CategoryDTO> categoryCommonResponse = new CommonResponse<>();
-        categoryCommonResponse.setCode(500);
-        categoryCommonResponse.setMessage("Sunucu şuan yoğun");
-        return ResponseEntity.status(500).body(categoryCommonResponse);
+    private ResponseEntity<CommonResponse<List<CategoryDTO>>> getCategoriesError(){
+        return ResponseEntity.status(500).body(Utility.commonErrorResponseFactory());
     }
+
+    private ResponseEntity<CommonResponse<CategoryDTO>> addCategoryError(CategoryDTO categoryDTO) {
+        return ResponseEntity.status(500).body(Utility.commonErrorResponseFactory());
+    }
+
+    private ResponseEntity<CommonResponse<CategoryDTO>> getCategoryError(CategoryDTO categoryDTO) {
+        return ResponseEntity.status(500).body(Utility.commonErrorResponseFactory());
+    }
+
+
 }

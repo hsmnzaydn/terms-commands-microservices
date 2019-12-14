@@ -1,5 +1,8 @@
 package com.hsmnzaydn.user_services;
 
+import com.hsmnzaydn.core_api.CommonResponse;
+import com.hsmnzaydn.core_api.utility.Utility;
+import com.hsmnzaydn.user_services.model.UserDTO;
 import com.hsmnzaydn.user_services.repository.User;
 import com.hsmnzaydn.user_services.service.UserService;
 
@@ -18,11 +21,9 @@ public class UserRestAPI {
     private final UserService userService;
 
 
-
     @PostMapping("register")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-
-        return ResponseEntity.ok(userService.saveUser(user));
+    public ResponseEntity<CommonResponse<User>> createUser(@RequestBody User user) {
+        return ResponseEntity.ok(Utility.commonResponseFactory(userService.saveUser(user)));
 
     }
 

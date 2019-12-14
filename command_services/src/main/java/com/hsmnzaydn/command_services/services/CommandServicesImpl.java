@@ -35,6 +35,7 @@ public class CommandServicesImpl implements CommandServices {
         createCommandEvent.setCommandId(command.getId());
         createCommandEvent.setCategoryId(command.getCategoryId());
         kafkaTemplate.send(KafkaTopics.CREATE_COMMAND, createCommandEvent);
+
         return commandDTO;
     }
 
