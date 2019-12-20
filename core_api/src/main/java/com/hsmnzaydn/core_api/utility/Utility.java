@@ -6,7 +6,7 @@ public class Utility {
 
     public static  <T>CommonResponse commonErrorResponseFactory(){
         CommonResponse<T> commonResponse=new CommonResponse<>();
-        commonResponse.setMessage("Şuan sunucu yoğun");
+        commonResponse.setMessage("Sunucuda bir hata oluştu. Lütfen daha sonra tekrar deneyiniz");
         commonResponse.setCode(500);
 
         return commonResponse;

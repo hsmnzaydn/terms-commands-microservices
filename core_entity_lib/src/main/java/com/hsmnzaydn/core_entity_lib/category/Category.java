@@ -1,6 +1,6 @@
-package com.hsmzaydn.category_services.repository;
+package com.hsmnzaydn.core_entity_lib.category;
 
-import com.hsmzaydn.category_services.models.CommandBean;
+import com.hsmnzaydn.core_entity_lib.command.Command;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,9 +18,9 @@ public class Category {
     private String categoryTitle;
 
     @Column
-    @ElementCollection(targetClass = CommandBean.class)
+    @ElementCollection(targetClass = Command.class)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<CommandBean> commands;
+    private List<Command> commands;
 
 
     public int getId() {
@@ -39,11 +39,11 @@ public class Category {
         this.categoryTitle = categoryTitle;
     }
 
-    public List<CommandBean> getCommands() {
+    public List<Command> getCommands() {
         return commands;
     }
 
-    public void setCommands(List<CommandBean> commands) {
+    public void setCommands(List<Command> commands) {
         this.commands = commands;
     }
 }

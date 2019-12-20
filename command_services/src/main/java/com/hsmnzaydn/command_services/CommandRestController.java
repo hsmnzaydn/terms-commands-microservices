@@ -27,7 +27,11 @@ public class CommandRestController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = HystrixConfiguration.TIME_OUT)
     })
     public ResponseEntity<CommonResponse<CommandDTO>> addCommand(@RequestBody CommandDTO commandDTO) throws ExecutionException, InterruptedException {
-        return ResponseEntity.ok(Utility.commonResponseFactory(commandServices.createCommand(commandDTO)));
+       try{
+           return ResponseEntity.ok(Utility.commonResponseFactory(commandServices.createCommand(commandDTO)));
+       }catch (Exception e){
+           return ResponseEntity.status(500).body(Utility.commonErrorResponseFactory());
+       }
     }
 
     @HystrixCommand(fallbackMethod = "getCommandsOfCategoryError", commandProperties = {
@@ -35,7 +39,12 @@ public class CommandRestController {
     })
     @GetMapping("/category/{categoryId}")
     public ResponseEntity<CommonResponse<List<CommandDTO>>> getCommandsOfCategory(@PathVariable int categoryId){
-        return ResponseEntity.ok(Utility.commonResponseFactory(commandServices.getCommandsOfCategory(categoryId)));
+       try {
+           return ResponseEntity.ok(Utility.commonResponseFactory(commandServices.getCommandsOfCategory(categoryId)));
+
+       }catch (Exception e){
+           return ResponseEntity.status(500).body(Utility.commonErrorResponseFactory());
+       }
     }
 
     private ResponseEntity<CommonResponse<CommandDTO>> addCommandError(){

@@ -5,9 +5,7 @@ import com.hsmnzaydn.command_services.model.CommandDTO;
 import com.hsmnzaydn.command_services.repository.Command;
 import com.hsmnzaydn.command_services.repository.CommandRepository;
 import com.hsmnzaydn.core_api.events.CreateCommandEvent;
-import com.hsmnzaydn.core_api.kafka.KafkaTopics;
 import lombok.RequiredArgsConstructor;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +19,7 @@ public class CommandServicesImpl implements CommandServices {
     private final CommandRepository commandRepository;
 
 
-    private final KafkaTemplate<String, CreateCommandEvent> kafkaTemplate;
+
 
 
 
@@ -34,8 +32,6 @@ public class CommandServicesImpl implements CommandServices {
         CreateCommandEvent createCommandEvent = new CreateCommandEvent();
         createCommandEvent.setCommandId(command.getId());
         createCommandEvent.setCategoryId(command.getCategoryId());
-        kafkaTemplate.send(KafkaTopics.CREATE_COMMAND, createCommandEvent);
-
         return commandDTO;
     }
 

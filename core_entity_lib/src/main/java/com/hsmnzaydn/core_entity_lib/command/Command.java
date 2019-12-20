@@ -1,4 +1,4 @@
-package com.hsmnzaydn.command_services.repository;
+package com.hsmnzaydn.core_entity_lib.command;
 
 import lombok.Data;
 
@@ -6,11 +6,11 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "Command")
 public class Command {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
     private int id;
 
     private Integer categoryId;
