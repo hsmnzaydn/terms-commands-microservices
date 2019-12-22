@@ -1,4 +1,4 @@
-package com.hsmnzaydn.user_services.repository;
+package com.hsmnzaydn.core_entity_lib.user;
 
 import lombok.Data;
 

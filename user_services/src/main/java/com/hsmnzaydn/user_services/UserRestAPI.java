@@ -2,8 +2,7 @@ package com.hsmnzaydn.user_services;
 
 import com.hsmnzaydn.core_api.CommonResponse;
 import com.hsmnzaydn.core_api.utility.Utility;
-import com.hsmnzaydn.user_services.model.UserDTO;
-import com.hsmnzaydn.user_services.repository.User;
+import com.hsmnzaydn.core_entity_lib.user.User;
 import com.hsmnzaydn.user_services.service.UserService;
 
 import lombok.RequiredArgsConstructor;

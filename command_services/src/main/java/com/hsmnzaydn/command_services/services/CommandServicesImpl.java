@@ -2,9 +2,9 @@ package com.hsmnzaydn.command_services.services;
 
 
 import com.hsmnzaydn.command_services.model.CommandDTO;
-import com.hsmnzaydn.command_services.repository.Command;
 import com.hsmnzaydn.command_services.repository.CommandRepository;
 import com.hsmnzaydn.core_api.events.CreateCommandEvent;
+import com.hsmnzaydn.core_entity_lib.command.Command;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +17,6 @@ public class CommandServicesImpl implements CommandServices {
 
 
     private final CommandRepository commandRepository;
-
-
 
 
 

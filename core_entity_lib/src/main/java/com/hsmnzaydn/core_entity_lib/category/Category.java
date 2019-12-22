@@ -1,13 +1,13 @@
 package com.hsmnzaydn.core_entity_lib.category;
 
 import com.hsmnzaydn.core_entity_lib.command.Command;
-import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
 
+
+
 @Entity
-@Data
 @Table(name = "Category")
 public class Category {
 

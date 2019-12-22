@@ -82,11 +82,19 @@
             <artifactId>httpcore</artifactId>
             <version>4.4.8</version>
         </dependency>
+
+
         <dependency>
             <groupId>com.hsmnzaydn</groupId>
             <artifactId>core_api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hsmnzaydn</groupId>
+            <artifactId>core_entity_lib</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

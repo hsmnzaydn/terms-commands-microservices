@@ -1,6 +1,7 @@
 package com.hsmnzaydn.user_services.model;
 
-import com.hsmnzaydn.user_services.repository.User;
+
+import com.hsmnzaydn.core_entity_lib.user.User;
 
 public class UserDTO {
     private int userId;

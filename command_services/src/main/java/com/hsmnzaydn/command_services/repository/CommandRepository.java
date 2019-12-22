@@ -1,6 +1,7 @@
 package com.hsmnzaydn.command_services.repository;
 
 
+import com.hsmnzaydn.core_entity_lib.command.Command;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

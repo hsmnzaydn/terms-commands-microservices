@@ -1,6 +1,6 @@
 package com.hsmnzaydn.user_services.service;
 
-import com.hsmnzaydn.user_services.repository.User;
+import com.hsmnzaydn.core_entity_lib.user.User;
 import com.hsmnzaydn.user_services.repository.UserRepository;
 import com.hsmnzaydn.user_services.utility.JwtTokenUtil;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,7 @@
 package com.hsmzaydn.category_services.services;
 
 
+import com.hsmnzaydn.core_entity_lib.category.Category;
 import com.hsmzaydn.category_services.models.CategoryDTO;
 import com.hsmzaydn.category_services.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -23,11 +24,7 @@ public class CategoryServicesImpl implements CategoryServices {
     @Override
     public CategoryDTO createCategory(CategoryDTO categoryBean) {
 
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         Category category = new Category();
         category.setCategoryTitle(categoryBean.getCategoryTitle());
         //  commandGateway.send(new CategoryCreatedCommand(categoryBean.getCategoryId(), categoryBean.getCategoryTitle()));

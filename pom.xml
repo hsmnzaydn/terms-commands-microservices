@@ -15,6 +15,7 @@
         <module>category_services</module>
         <module>command_services</module>
         <module>core_api</module>
+        <module>core_entity_lib</module>
     </modules>
 
 </project>
