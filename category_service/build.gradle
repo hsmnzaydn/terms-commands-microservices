@@ -1,0 +1,66 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+
+}
+
+group = 'com.hsmnzaydn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+
+
+dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-starter-hystrix:1.1.5.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.8.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
+	implementation 'org.projectlombok:lombok:1.18.8'
+	implementation 'org.springframework.cloud:spring-cloud-starter:2.0.0.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.0.0.RELEASE'
+	implementation 'com.google.guava:guava:23.6-jre'
+	implementation 'org.apache.httpcomponents:httpcore:4.4.8'
+	implementation project(':common')
+	implementation project(':core_entity_lib')
+	runtimeOnly 'mysql:mysql-connector-java:8.0.17'
+	compileOnly 'org.projectlombok:lombok:1.18.10'
+	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
+	testImplementation 'org.springframework.security:spring-security-test:5.1.6.RELEASE'
+}
+
+
+bootJar {
+	mainClassName = 'com.hsmnzaydn.category.CategoryApplication'
+}
+
+jar {
+
+
+	manifest {
+		attributes "Main-Class": "com.hsmnzaydn.category.CategoryApplication"
+	}
+
+	from {
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+}
+
+task customFatJar(type: Jar) {
+	manifest {
+		attributes 'Main-Class': 'com.hsmnzaydn.category.CategoryApplication'
+	}
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+}
+
+
+
+
+test {
+	useJUnitPlatform()
+}

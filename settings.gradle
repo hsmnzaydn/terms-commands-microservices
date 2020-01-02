@@ -1,0 +1,9 @@
+rootProject.name = 'term'
+
+include 'category_service'
+include 'core_entity_lib'
+include 'common'
+include 'command_service'
+include 'user_service'
+include 'discovery_service'
+include 'api_gateway'

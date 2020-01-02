@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db983012-f316-4237-9c18-264faca1fb74" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/category">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/common_lib">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/core_entity_lib">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/category_service">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="term" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="term" type="f1a62948:ProjectNode" />
+                <item name="category_service" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="term" type="f1a62948:ProjectNode" />
+                <item name="category_service" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="term" type="f1a62948:ProjectNode" />
+                <item name="category_service" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="ProjectId" id="1VoQ4hNplNBGgN0KuF094I1HiD9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_gateway/src/main/java/com/hsmnzaydn/api_gateway" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/category/build/resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api_gateway/src/main/java/com/hsmnzaydn/api_gateway" />
+      <recent name="$PROJECT_DIR$/api_gateway/src/main/resources" />
+      <recent name="$PROJECT_DIR$/user_service/src/main/java/com/hsmnzaydn/user_service" />
+      <recent name="$PROJECT_DIR$/category_service/src/main/java/com/hsmnzaydn/category" />
+      <recent name="$PROJECT_DIR$/command_service/src/main/java/com/hsmnzaydn/command" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+    <configuration name="term [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="term" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="term:category [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/category" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="term:category_service [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/category_service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="term.category_service" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="term.category_service" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.api_gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.api_gateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.category_service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.category.CategoryApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.command_service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.command.CommandApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.common.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.common.CommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoreEntityLibApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.core_entity_lib.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.core_entity_lib.CoreEntityLibApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.discovery_service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.discovery_service.DiscoveryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="term.user_service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hsmnzaydn.user_service.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.term:category [jar]" />
+      <item itemvalue="Gradle.term" />
+      <item itemvalue="Gradle.term:category_service [clean]" />
+      <item itemvalue="Gradle.term [dependencies]" />
+      <item itemvalue="Spring Boot.CategoryServiceApplication" />
+      <item itemvalue="Spring Boot.CoreEntityLibApplication" />
+      <item itemvalue="Spring Boot.CommonApplication" />
+      <item itemvalue="Spring Boot.CommandServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.term [dependencies]" />
+        <item itemvalue="Gradle.term:category_service [clean]" />
+        <item itemvalue="Gradle.term" />
+        <item itemvalue="Gradle.term:category [jar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db983012-f316-4237-9c18-264faca1fb74" name="Default Changelist" comment="" />
+      <created>1577916778172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577916778172</updated>
+      <workItem from="1577916781638" duration="7763000" />
+      <workItem from="1577966804977" duration="1340000" />
+      <workItem from="1577970052671" duration="5553000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="202" key="#Assign_Data_Sources" timestamp="1577917305727">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="440" y="202" key="#Assign_Data_Sources/0.23.1680.1027@0.23.1680.1027" timestamp="1577917305727" />
+    <state x="464" y="158" key="#CategoryApplication" timestamp="1577984839630">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="464" y="158" key="#CategoryApplication/0.23.1680.1027@0.23.1680.1027" timestamp="1577984839630" />
+    <state x="464" y="158" key="#CommandApplication" timestamp="1577984920868">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="464" y="158" key="#CommandApplication/0.23.1680.1027@0.23.1680.1027" timestamp="1577984920868" />
+    <state x="222" y="202" width="1018" height="669" key="#Project_Structure" timestamp="1577970332020">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="222" y="202" width="1018" height="669" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1577970332020" />
+    <state x="440" y="202" key="#Web_Browsers" timestamp="1577922671758">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="440" y="202" key="#Web_Browsers/0.23.1680.1027@0.23.1680.1027" timestamp="1577922671758" />
+    <state x="549" y="192" key="#category-0.0.1-SNAPSHOT.jar" timestamp="1577919557343">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="549" y="192" key="#category-0.0.1-SNAPSHOT.jar/0.23.1680.1027@0.23.1680.1027" timestamp="1577919557343" />
+    <state x="471" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577987121415">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="471" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1577987121415" />
+    <state x="599" y="384" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1577923603693">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="599" y="384" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1577923603693" />
+    <state x="602" y="403" width="475" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1577922025452">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="602" y="403" width="475" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1680.1027@0.23.1680.1027" timestamp="1577922025452" />
+    <state width="1126" height="427" key="GridCell.Tab.0.bottom" timestamp="1577987647870">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647870" />
+    <state width="1126" height="427" key="GridCell.Tab.0.center" timestamp="1577987647869">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647869" />
+    <state width="1126" height="427" key="GridCell.Tab.0.left" timestamp="1577987647869">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647869" />
+    <state width="1126" height="427" key="GridCell.Tab.0.right" timestamp="1577987647870">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647870" />
+    <state width="1126" height="427" key="GridCell.Tab.1.bottom" timestamp="1577987647871">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647871" />
+    <state width="1126" height="427" key="GridCell.Tab.1.center" timestamp="1577987647871">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647871" />
+    <state width="1126" height="427" key="GridCell.Tab.1.left" timestamp="1577987647871">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647871" />
+    <state width="1126" height="427" key="GridCell.Tab.1.right" timestamp="1577987647871">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1126" height="427" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1577987647871" />
+    <state x="469" y="237" key="NewModule_or_Project.wizard" timestamp="1577920789632">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="469" y="237" key="NewModule_or_Project.wizard/0.23.1680.1027@0.23.1680.1027" timestamp="1577920789632" />
+    <state x="349" y="175" key="SettingsEditor" timestamp="1577923615012">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="349" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1577923615012" />
+    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1577985647750">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1577985647750" />
+    <state x="234" y="150" key="new project wizard" timestamp="1577986772802">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="234" y="150" key="new project wizard/0.23.1680.1027@0.23.1680.1027" timestamp="1577986772802" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1577986353591">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1577986353591" />
+  </component>
+</project>

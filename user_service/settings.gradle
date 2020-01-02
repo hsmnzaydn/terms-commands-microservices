@@ -1,0 +1,3 @@
+rootProject.name = 'user_service'
+include 'core_entity_lib'
+include 'common'

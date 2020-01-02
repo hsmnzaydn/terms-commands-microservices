@@ -1,0 +1,48 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zuul-proxy
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+zuul:
+  routes:
+    category-service:
+      serviceId: category-service
+      path: /api/categories/**
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+      registerWithEureka: false
+      client:
+        fetchRegistry: true
+
+    command-service:
+      serviceId: command-service
+      path: /api/commands/**
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+
+    user-service:
+      serviceId: user-service
+      path: /api/users/**
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+      registerWithEureka: false
+      client:
+        fetchRegistry: true
+
+  host:
+    socket-timeout-millis: 30000
+
+ribbon:
+  ReadTimeout: 60000
+

@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.hsmnzaydn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.8.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter-hystrix:1.1.5.RELEASE'
+	compileOnly 'org.projectlombok:lombok:1.18.10'
+	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+	implementation 'org.springframework.cloud:spring-cloud-starter:2.1.0.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.1.0.RELEASE'
+	implementation 'com.google.guava:guava:23.6-jre'
+	implementation 'org.apache.httpcomponents:httpcore:4.4.8'
+	runtimeOnly 'mysql:mysql-connector-java:8.0.17'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
+	testImplementation 'org.springframework.security:spring-security-test:5.1.6.RELEASE'
+
+	implementation project(":common")
+	implementation project(":core_entity_lib")
+
+}
+
+
+test {
+	useJUnitPlatform()
+}

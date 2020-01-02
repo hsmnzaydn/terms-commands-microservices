@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.hsmnzaydn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter:2.0.0.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:2.0.0.RELEASE'
+	implementation 'javax.xml.bind:jaxb-api:2.3.1'
+	implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
+
+}
+
+test {
+	useJUnitPlatform()
+}
