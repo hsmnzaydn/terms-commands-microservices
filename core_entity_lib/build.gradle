@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.1.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id 'maven-publish'
 }
 
 group = 'com.hsmnzaydn'
@@ -10,6 +11,7 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 dependencies {
@@ -19,6 +21,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter:2.1.8.RELEASE'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.1.8.RELEASE'
 	implementation 'org.projectlombok:lombok:1.18.8'
+
 }
 
 bootJar {
@@ -28,7 +31,13 @@ bootJar {
 jar {
 	enabled = true
 }
-
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			from components.java
+		}
+	}
+}
 test {
 	useJUnitPlatform()
 }
