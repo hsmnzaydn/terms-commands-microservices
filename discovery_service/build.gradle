@@ -22,6 +22,23 @@ dependencies {
 
 }
 
+bootJar {
+	mainClassName = 'com.hsmnzaydn.discovery_service.DiscoveryServiceApplication'
+}
+
+jar {
+
+
+	manifest {
+		attributes "Main-Class": "com.hsmnzaydn.discovery_service.DiscoveryServiceApplication"
+	}
+
+	from {
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+}
+
+
 test {
 	useJUnitPlatform()
 }

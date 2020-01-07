@@ -9,6 +9,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -29,11 +30,26 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
 	testImplementation 'org.springframework.security:spring-security-test:5.1.6.RELEASE'
 
-	implementation project(":common")
-	implementation project(":core_entity_lib")
+	implementation 'com.hsmnzaydn:common:0.0.1-SNAPSHOT'
+	implementation 'com.hsmnzaydn:core_entity_lib:0.0.1-SNAPSHOT'
 
 }
 
+bootJar {
+	mainClassName = 'com.hsmnzaydn.command.CommandApplication'
+}
+
+jar {
+
+
+	manifest {
+		attributes "Main-Class": "com.hsmnzaydn.command.CommandApplication"
+	}
+
+	from {
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+}
 
 test {
 	useJUnitPlatform()

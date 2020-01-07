@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 
+
 }
 
 group = 'com.hsmnzaydn'
@@ -10,10 +11,9 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
-
-
 
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-hystrix:1.1.5.RELEASE'
@@ -24,8 +24,13 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.0.0.RELEASE'
 	implementation 'com.google.guava:guava:23.6-jre'
 	implementation 'org.apache.httpcomponents:httpcore:4.4.8'
-	implementation project(':common')
-	implementation project(':core_entity_lib')
+	//implementation 'com.hsmnzaydn.common:common:0.0.1-SNAPSHOT'
+	implementation 'com.hsmnzaydn:common:0.0.1-SNAPSHOT'
+	implementation 'com.hsmnzaydn:core_entity_lib:0.0.1-SNAPSHOT'
+	//implementation project(':common')
+	//implementation project(':core_entity_lib')
+	//implementation files('/Users/hsmnzaydn/IdeaProjects/term/common/build/libs/common-0.0.1-SNAPSHOT.jar')
+	//implementation files('/Users/hsmnzaydn/IdeaProjects/term/core_entity_lib/build/libs/core_entity_lib-0.0.1-SNAPSHOT.jar')
 	runtimeOnly 'mysql:mysql-connector-java:8.0.17'
 	compileOnly 'org.projectlombok:lombok:1.18.10'
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
@@ -39,8 +44,6 @@ bootJar {
 }
 
 jar {
-
-
 	manifest {
 		attributes "Main-Class": "com.hsmnzaydn.category.CategoryApplication"
 	}
@@ -59,8 +62,10 @@ task customFatJar(type: Jar) {
 }
 
 
-
-
 test {
 	useJUnitPlatform()
+}
+
+task showMeCache {
+	configurations.compile.each { println it }
 }

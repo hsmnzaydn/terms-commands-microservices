@@ -12,7 +12,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
   instance:
-    preferIpAddress: true
+    hostname: localhost:8761
 
 zuul:
   routes:
@@ -21,9 +21,7 @@ zuul:
       path: /api/categories/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
-      registerWithEureka: false
-      client:
-        fetchRegistry: true
+
 
     command-service:
       serviceId: command-service
@@ -36,13 +34,14 @@ zuul:
       path: /api/users/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
-      registerWithEureka: false
-      client:
-        fetchRegistry: true
+
 
   host:
-    socket-timeout-millis: 30000
+    socket-timeout-millis: 60000
 
 ribbon:
   ReadTimeout: 60000
+  ConnectTimeout: 60000
+  eureka:
+    enabled: true
 

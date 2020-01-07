@@ -1,0 +1,81 @@
+version: '3'
+services:
+
+  discovery:
+    image: hsmnzaydn/service-discovery
+    container_name: service-discovery
+    build:
+      context: ./discovery_service
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    depends_on:
+      - database
+
+  api_gateway:
+    image: hsmnzaydn/service-gateway
+    container_name: service-gateway
+    build:
+      context: ./api_gateway
+      dockerfile: Dockerfile
+    ports:
+     - "8080:8080"
+    extra_hosts:
+      - localhost:${LOCAL_IP}
+
+
+  category:
+    image: hsmnzaydn/service-category
+    container_name: service-category
+    build:
+      context: ./category_service
+      dockerfile: Dockerfile
+    ports:
+     - "8200:8200"
+
+    extra_hosts:
+      - localhost:${LOCAL_IP}
+
+  user:
+      image: hsmnzaydn/service-user
+      container_name: service-user
+      build:
+        context: ./user_service
+        dockerfile: Dockerfile
+      ports:
+        - "8400:8400"
+
+      extra_hosts:
+        - localhost:${LOCAL_IP}
+
+
+  command:
+    image: hsmnzaydn/service-command
+    container_name: service-command
+    build:
+      context: ./command_service
+      dockerfile: Dockerfile
+    ports:
+      - "8500:8500"
+
+    extra_hosts:
+      - localhost:${LOCAL_IP}
+
+
+
+
+  database:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: 'term-commands'
+      MYSQL_USER: 'term'
+      MYSQL_PASSWORD: 'command'
+      MYSQL_ROOT_PASSWORD: 'commands'
+    ports:
+     - "3306:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+    my-db:

@@ -9,6 +9,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -22,8 +23,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
 	implementation 'org.springframework.cloud:spring-cloud-starter:2.0.0.RELEASE'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.0.0.RELEASE'
-	implementation project(':common')
-	implementation project(':core_entity_lib')
+	implementation 'com.hsmnzaydn:common:0.0.1-SNAPSHOT'
+	implementation 'com.hsmnzaydn:core_entity_lib:0.0.1-SNAPSHOT'
 	runtimeOnly 'mysql:mysql-connector-java:8.0.17'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
 
