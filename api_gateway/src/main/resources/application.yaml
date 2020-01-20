@@ -31,7 +31,7 @@ zuul:
 
     user-service:
       path: /api/users/**
-      url: http://user-service:8400
+      url: http://user:8400
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
 
