@@ -1,6 +1,7 @@
 package com.hsmnzaydn.category.services;
 
 
+import com.hsmnzaydn.category.error.CategoryNotFoundException;
 import com.hsmnzaydn.category.models.CategoryDTO;
 import com.hsmnzaydn.category.repository.CategoryRepository;
 import com.hsmnzaydn.core_entity_lib.category.Category;
@@ -15,20 +16,14 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CategoryServicesImpl implements CategoryServices {
 
-
     private final CategoryRepository categoryRepository;
-
-
 
 
     @Override
     public CategoryDTO createCategory(CategoryDTO categoryBean) {
-
-
         Category category = new Category();
-      //  category.setCategoryTitle(categoryBean.getCategoryTitle());
-        //  commandGateway.send(new CategoryCreatedCommand(categoryBean.getCategoryId(), categoryBean.getCategoryTitle()));
-        // kafkaTemplate.send("test","aaa");
+        category.setCategoryTitle(categoryBean.getCategoryTitle());
+
         return new CategoryDTO(category.getId(),category.getCategoryTitle());
     }
 

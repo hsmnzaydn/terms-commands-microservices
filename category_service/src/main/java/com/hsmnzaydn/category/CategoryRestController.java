@@ -23,9 +23,6 @@ public class CategoryRestController {
     CategoryServices categoryServices;
 
     @PostMapping
-    @HystrixCommand(fallbackMethod = "addCategoryError", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = HystrixConfiguration.TIME_OUT)
-    })
     public ResponseEntity<CommonResponse<CategoryDTO>> addCategory(@RequestBody CategoryDTO categoryDTO) throws ExecutionException, InterruptedException {
 
         return ResponseEntity.ok(Utility.commonResponseFactory(categoryServices.createCategory(categoryDTO)));
