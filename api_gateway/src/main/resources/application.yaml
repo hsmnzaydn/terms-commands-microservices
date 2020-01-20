@@ -10,28 +10,28 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://discovery:8761/eureka
   instance:
-    hostname: localhost:8761
+    hostname: discovery:8761
 
 zuul:
   routes:
     category-service:
-      serviceId: category-service
+      url: http://category:8200
       path: /api/categories/**
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
 
 
     command-service:
-      serviceId: command-service
       path: /api/commands/**
+      url: http://command:8500
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
 
     user-service:
-      serviceId: user-service
       path: /api/users/**
+      url: http://user-service:8400
       strip-prefix: false
       sensitive-headers: Cookie,Set-Cookie
 
