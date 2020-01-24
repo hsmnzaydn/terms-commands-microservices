@@ -82,6 +82,8 @@ services:
       - "discovery:discovery"
 
 
+  jenkins:
+    image: jenkins/jenkins:lts
 
 
 
@@ -102,6 +104,7 @@ services:
 
 volumes:
   my-db:
+
 
 networks:
   backend:
